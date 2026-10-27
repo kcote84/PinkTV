@@ -1,0 +1,14 @@
+<resources>
+    <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:fontFamily">sans</item><item name="android:colorAccent">#FF91C1</item>
+        <item name="android:windowBackground">#19131F</item><item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowLightStatusBar">false</item><item name="android:windowFullscreen">true</item>
+        <item name="android:alertDialogTheme">@style/PinkDialog</item>
+    </style>
+    <style name="PinkDialog" parent="android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorAccent">#FF91C1</item>
+        <item name="android:colorBackground">#302637</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#C5B5C9</item>
+    </style>
+</resources>

@@ -1,0 +1,4 @@
+3864dcdff3c6f4ad2e524264d505ad335f659f9b7ede83f0ce66d3f8d2891c3a  app/src/main/jniLibs/arm64-v8a/libpinkstereo.so
+2d1614c8b72b44b82e99645cd33862b9d6a732ca1d033f43dc8327b1a1c45c53  app/src/main/jniLibs/armeabi-v7a/libpinkstereo.so
+d095bf5dc543d26b6829e9aff973d35b95800bc7f9b6d7adaad26484804adb1b  app/src/main/jniLibs/x86/libpinkstereo.so
+655f8d6425b29a0074227914898ed643a1a5b56d337b92e976fcd114d31198ba  app/src/main/jniLibs/x86_64/libpinkstereo.so

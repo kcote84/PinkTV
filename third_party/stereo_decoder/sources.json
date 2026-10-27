@@ -1,0 +1,6 @@
+{
+  "media3_commit": "c35a9d62baec57118ea898e271ac66819399649b",
+  "ffmpeg_commit": "b0afceda2871dca7ca3c6ca92f4124fabc878a20",
+  "ffmpeg_source_sha256": "962314590e8887876e8fbeac75d74bb93c35894664a4d6a6c59da33832cfd0b3",
+  "source_url": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/b0afceda2871dca7ca3c6ca92f4124fabc878a20"
+}

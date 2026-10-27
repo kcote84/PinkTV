@@ -1,0 +1,5 @@
+{
+  "component": "Optional stereo decoder",
+  "upstream": "https://github.com/androidx/media",
+  "note": "Bundled prebuilt libraries, renamed without binary modification. See binaries.sha256, sources.json, build script and licenses."
+}
