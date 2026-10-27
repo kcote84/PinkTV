@@ -1,4 +1,17 @@
-# Validation de Pink TV 1.0.0
+# Validation de Pink TV
+
+## Mise à jour 1.0.1 — 27 octobre 2026
+
+Correction de la mesure des onglets du guide dans la rangée à défilement horizontal. Les boutons mesurent leur texte avant de répartir l’espace disponible; ils restent sur une ligne. La hauteur de la rangée laisse aussi les marges des boutons visibles.
+
+- Compilation de l’APK de production 1.0.1 (code 2), 69 tests unitaires et analyse Android sans erreur.
+- Trois tests Android ciblés réussis sur émulateur API 35 : sept onglets entièrement lisibles et sans défilement à 960 dp; libellés complets et dernier onglet accessible par défilement à 640 dp avec police à 150 %; gestes mobiles vérifiés sur la vue native.
+- Le test mobile vérifie l’avance de deux heures, le retour vers l’horaire actuel, la limite empêchant de reculer avant cet horaire et le changement vertical de chaînes. Un glissement ne lance aucune lecture.
+- Certificat de signature identique à 1.0.0, pour permettre une mise à jour en place. Les comptes, favoris et fichiers ne sont pas modifiés par cette correction.
+
+Les limites de la validation sur émulateur restent celles décrites ci-dessous; aucun essai sur Firestick physique n’est revendiqué.
+
+## Version initiale 1.0.0
 
 Vérifications réalisées pendant la préparation du 26 octobre 2026.
 

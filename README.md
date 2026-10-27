@@ -16,7 +16,9 @@ Ouvrir **Réglages → Ajouter un compte Xtream**, puis saisir l’URL du serveu
 - **Enregistrements** : choisir une émission dans le guide, ou **Enregistrer** pendant une chaîne pour 30, 60 ou 120 minutes. Les fichiers MPEG-TS restent dans le stockage privé de l’appareil, sans PC ni serveur compagnon.
 - **Mises à jour** : disponibles dans Réglages; le téléchargement est vérifié par SHA-256, nom de paquet, version et signature.
 
-Sur téléphone, l’accueil passe en deux colonnes, les affiches restent lisibles en portrait et les commandes défilent horizontalement. Sur TV, les marges de sécurité et le focus D-pad sont conservés. La rotation est permise sur téléphone.
+Sur téléphone, l’accueil passe en deux colonnes, les affiches restent lisibles en portrait et les commandes défilent horizontalement. Dans le guide en cartes, glisser vers la gauche avance de **2 heures pour toutes les chaînes**; glisser vers la droite recule vers l’horaire actuel. Glisser verticalement change la page de chaînes. Chaque carte affiche une émission et la suivante. Toucher ouvre les détails; maintenir ouvre les options, dont **Revenir à maintenant**. Le glissement consulte l’horaire sans lancer de vidéo.
+
+Sur TV, les marges de sécurité et le focus D-pad sont conservés. Les onglets du guide utilisent toute la largeur disponible; sur un écran étroit ou avec de gros caractères, la rangée défile pour garder les libellés complets. La rotation est permise sur téléphone.
 
 ## Enregistrements locaux
 

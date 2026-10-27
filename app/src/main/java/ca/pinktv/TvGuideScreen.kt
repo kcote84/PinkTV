@@ -102,7 +102,14 @@ class TvGuideScreen(private val activity: Activity, val account: Account?, priva
     }
     private fun row(height: Int) = LinearLayout(activity).also { view.addView(it, LinearLayout.LayoutParams(-1, dp(height))) }
     private fun add(row: LinearLayout, button: Button, weight: Float = 1f) {
-        row.addView(button, LinearLayout.LayoutParams(if(DeviceLayout.compact(activity)) dp(105) else 0, dp(48), if(DeviceLayout.compact(activity)) 0f else weight).apply { setMargins(0, dp(3), dp(6), dp(3)) })
+        val compact=DeviceLayout.compact(activity)
+        button.setSingleLine(true)
+        if(compact) button.minimumWidth=dp(105)
+        // Measure each label before sharing spare space. Zero-width weighted children
+        // collapse to their minimum width during HorizontalScrollView's first pass.
+        row.addView(button, LinearLayout.LayoutParams(-2, -1, if(compact) 0f else weight).apply {
+            setMargins(0,dp(3),dp(6),dp(3))
+        })
     }
     init {
         view.orientation = LinearLayout.VERTICAL; view.setBackgroundColor(bg); TvSafeArea.apply(view, activity, store.prefs.getBoolean("wide_safe_area", false))
@@ -110,7 +117,11 @@ class TvGuideScreen(private val activity: Activity, val account: Account?, priva
         top.addView(text(27f, accent).apply { setText(R.string.guide_title); setTypeface(null, Typeface.BOLD) }, LinearLayout.LayoutParams(0, -1, 1f))
         clock = text(if(DeviceLayout.compact(activity)) 11f else 14f, muted).apply { text = date.format(Date()) }; top.addView(clock)
         val tools = LinearLayout(activity)
-        view.addView(HorizontalScrollView(activity).apply { isHorizontalScrollBarEnabled=false; addView(tools,android.view.ViewGroup.LayoutParams(if(DeviceLayout.compact(activity)) -2 else activity.resources.displayMetrics.widthPixels - 2 * TvSafeArea.insets(activity).horizontal,dp(50))) },LinearLayout.LayoutParams(-1,dp(50)))
+        view.addView(HorizontalScrollView(activity).apply {
+            isHorizontalScrollBarEnabled=false
+            isFillViewport=!DeviceLayout.compact(activity)
+            addView(tools,android.view.ViewGroup.LayoutParams(-2,-1))
+        },LinearLayout.LayoutParams(-1,dp(56)))
         listOf("★ Favoris", "Québec", "Toutes", "Adultes").forEach { label ->
             val b = button(label) { filter = label; category = ""; applyFilters(); grid.requestFocus() }
             filters[label] = b; add(tools, b)
